@@ -1,0 +1,43 @@
+{
+  "folders": [
+    {
+      "path": "server",
+      "name": "backend"
+    },
+    {
+      "path": "flutter_stock_analyze",
+      "name": "frontend"
+    },
+    {
+      "path": ".",
+      "name": "root"
+    }
+  ],
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "frontend",
+        "request": "launch",
+        "type": "dart",
+        "cwd": "${workspaceFolder:frontend}",
+        
+        // "program": "${workspaceFolder:frontend}",
+      },
+      {
+        "name": "backend",
+        "request": "launch",
+        "type": "debugpy",
+        "cwd": "${workspaceFolder:backend}",
+        "program": "${workspaceFolder:backend}/main.py",
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Both (Backend & Frontend)",
+        "configurations": ["backend", "frontend"],
+        "stopAll": true
+      }
+    ]
+  }
+}
