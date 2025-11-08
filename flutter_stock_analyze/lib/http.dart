@@ -4,7 +4,8 @@ import 'package:dio/dio.dart';
 
 final dio = Dio();
 
-final String host = "http://localhost:5000";
+// final String host = "http://localhost:5000";
+final String host = "https://stock.myfile.live";
 
 Future<String> fetchAnalysis(String stockCode) async {
   String url;
