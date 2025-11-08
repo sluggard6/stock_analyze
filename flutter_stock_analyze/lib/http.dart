@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:dio/dio.dart';
 
 final dio = Dio();
@@ -5,7 +7,13 @@ final dio = Dio();
 final String host = "http://localhost:5000";
 
 Future<String> fetchAnalysis(String stockCode) async {
-  final response = await dio.get('$host/analyze/$stockCode');
+  String url;
+  if (kIsWeb) {
+    url = '/analyze/$stockCode';
+  } else {
+    url = '$host/analyze/$stockCode';
+  }
+  final response = await dio.get(url);
   return response.data;
   // return getNumberLine(30);
 }

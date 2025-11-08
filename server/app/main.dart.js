@@ -23554,7 +23554,7 @@ while(true)switch(s){case 0:p=$.auK()
 o=A.ayu()
 o.a="GET"
 s=3
-return A.T(p.EI("http://localhost:5000/analyze/"+a,null,null,null,o,null,t.z),$async$ahW)
+return A.T(p.EI("/analyze/"+a,null,null,null,o,null,t.z),$async$ahW)
 case 3:q=c.a
 s=1
 break
